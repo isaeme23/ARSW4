@@ -1,0 +1,7 @@
+1. Para cumplir con las condiciones del primer punto, agregamos la anotacion de @Service a la clase de InMemoryBlueprintPersistence,
+ya que en la clase BlueprintServices existian ya las anotaciones de @Service y @Autowired en la variable de
+BlueprintPersistence que es una interfaz que se implementa en la clase de InMemoryBlueprintPersistence.
+
+2. Explicacion con imagenes en el documento de word.
+
+3.
