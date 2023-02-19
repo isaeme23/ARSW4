@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
-@Service
 public class FilterRedundancies implements FiltersPersistence{
     @Override
     public Blueprint filter(Blueprint blueprint) {

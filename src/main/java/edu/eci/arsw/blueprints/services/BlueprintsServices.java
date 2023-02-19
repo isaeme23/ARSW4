@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import edu.eci.arsw.blueprints.persistence.filters.FiltersPersistence;
 import edu.eci.arsw.blueprints.persistence.impl.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,9 @@ public class BlueprintsServices {
    
     @Autowired
     BlueprintsPersistence bpp;
+
+    @Autowired
+    FiltersPersistence fpp;
     
     public void addNewBlueprint(Blueprint bp) throws BlueprintPersistenceException {
         bpp.saveBlueprint(bp);

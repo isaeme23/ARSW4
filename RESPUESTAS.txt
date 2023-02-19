@@ -7,4 +7,6 @@ BlueprintPersistence que es una interfaz que se implementa en la clase de InMemo
 3. Se creo la clase Main dentro de edu.eci.arsw.blueprints.ui y desde alli se ejecuta con las funcione de consulta y
 registro de blueprints.
 
-4.
+4. Se crea la clase de FiltersPersistence como una interfaz, ademas se crean las dos clases de FilterSubsampling y
+FilterRedundancies implementando la interfaz. Se agrega el parametro del filtro a BlueprintServices con la etiqueta
+@Autowired y @Service a alguna de las clases de filtros.
