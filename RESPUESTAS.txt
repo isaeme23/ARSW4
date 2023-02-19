@@ -10,3 +10,6 @@ registro de blueprints.
 4. Se crea la clase de FiltersPersistence como una interfaz, ademas se crean las dos clases de FilterSubsampling y
 FilterRedundancies implementando la interfaz. Se agrega el parametro del filtro a BlueprintServices con la etiqueta
 @Autowired y @Service a alguna de las clases de filtros.
+
+5. Se implementaron las pruebas respectivamente con el nombre de la clase a probar para cada filtro. Es importante
+resaltar que el filtro de Subsampling empieza eliminando puntos, es decir elimina las posiciones impares.

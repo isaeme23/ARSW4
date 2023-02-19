@@ -24,6 +24,6 @@ public class FilterRedundancies implements FiltersPersistence{
             }
         }
         Point[] points = pnts.toArray(new Point[0]);
-        return new Blueprint(blueprint.getName(), blueprint.getAuthor(), points);
+        return new Blueprint(blueprint.getAuthor(), blueprint.getName(), points);
     }
 }

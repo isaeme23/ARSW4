@@ -13,7 +13,7 @@ public class FilterSubsampling implements FiltersPersistence{
     public Blueprint filter(Blueprint blueprint) {
         ArrayList<Point> pnts=new ArrayList<Point>();
         for (int i = 0; i < blueprint.getPoints().size() ; i++){
-            if(i % 2 == 0){
+            if(i % 2 != 0){
                 pnts.add(blueprint.getPoints().get(i));
             }
         }
