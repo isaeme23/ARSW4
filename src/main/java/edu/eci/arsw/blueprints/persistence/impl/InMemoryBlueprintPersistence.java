@@ -31,7 +31,6 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         Point[] pts=new Point[]{new Point(140, 140),new Point(115, 115)};
         Blueprint bp=new Blueprint("_authorname_", "_bpname_ ",pts);
         blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        
     }    
     
     @Override
@@ -60,5 +59,9 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
             }
         }
         return blueprintSet;
+    }
+
+    public HashSet<Blueprint> getBlueprints(){
+        return new HashSet<Blueprint>(blueprints.values());
     }
 }

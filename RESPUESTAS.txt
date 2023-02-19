@@ -4,4 +4,7 @@ BlueprintPersistence que es una interfaz que se implementa en la clase de InMemo
 
 2. Explicacion con imagenes en el documento de word.
 
-3.
+3. Se creo la clase Main dentro de edu.eci.arsw.blueprints.ui y desde alli se ejecuta con las funcione de consulta y
+registro de blueprints.
+
+4.

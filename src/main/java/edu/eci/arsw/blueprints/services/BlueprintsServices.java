@@ -7,8 +7,10 @@ package edu.eci.arsw.blueprints.services;
 
 import edu.eci.arsw.blueprints.model.Blueprint;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
+import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -27,12 +29,12 @@ public class BlueprintsServices {
     @Autowired
     BlueprintsPersistence bpp;
     
-    public void addNewBlueprint(Blueprint bp){
-        
+    public void addNewBlueprint(Blueprint bp) throws BlueprintPersistenceException {
+        bpp.saveBlueprint(bp);
     }
     
-    public Set<Blueprint> getAllBlueprints(){
-        return null;
+    public HashSet<Blueprint> getAllBlueprints() {
+        return bpp.getBlueprints();
     }
     
     /**
@@ -62,6 +64,15 @@ public class BlueprintsServices {
         } catch (BlueprintNotFoundException e) {
             throw new BlueprintNotFoundException(e.getMessage());
         }
+    }
+
+    public void registerBlueprint(Blueprint blueprint) throws BlueprintPersistenceException {
+        try{
+            bpp.saveBlueprint(blueprint);
+        } catch (BlueprintPersistenceException e){
+            throw new BlueprintPersistenceException(e.getMessage());
+        }
+
     }
     
 }
